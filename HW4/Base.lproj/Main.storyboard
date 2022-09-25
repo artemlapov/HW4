@@ -39,8 +39,11 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="boA-GU-20L">
-                                                <rect key="frame" x="58" y="0.0" width="334" height="31"/>
+                                                <rect key="frame" x="58" y="-1" width="334" height="31"/>
                                                 <color key="tintColor" systemColor="systemRedColor"/>
+                                                <connections>
+                                                    <action selector="redSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="8HG-oM-mRa"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -62,6 +65,9 @@
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="3fP-If-oRb">
                                                 <rect key="frame" x="58" y="0.0" width="334" height="31"/>
                                                 <color key="tintColor" systemColor="systemGreenColor"/>
+                                                <connections>
+                                                    <action selector="greenSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="yuQ-Ya-gTp"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -84,6 +90,9 @@
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="MeQ-Sk-WZ2">
                                                 <rect key="frame" x="58" y="0.0" width="334" height="31"/>
                                                 <color key="tintColor" systemColor="systemBlueColor"/>
+                                                <connections>
+                                                    <action selector="blueSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="1d5-23-14h"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -107,6 +116,15 @@
                             <constraint firstItem="W0f-ig-POZ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.137339" id="YLH-I7-kwk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bluePercentLabel" destination="A7t-KI-Qh1" id="wmt-rM-maf"/>
+                        <outlet property="blueSlider" destination="MeQ-Sk-WZ2" id="H5Z-mS-Vo7"/>
+                        <outlet property="exampleOfColor" destination="W0f-ig-POZ" id="cTY-45-SHS"/>
+                        <outlet property="greenPercentLabel" destination="QMv-G8-5ix" id="OGZ-mV-hD0"/>
+                        <outlet property="greenSlider" destination="3fP-If-oRb" id="Z0o-2A-1eO"/>
+                        <outlet property="redPercentLabel" destination="Ghs-Yw-vn4" id="bco-Hh-dYe"/>
+                        <outlet property="redSlider" destination="boA-GU-20L" id="I7z-6o-j4G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
