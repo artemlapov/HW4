@@ -22,30 +22,36 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         exampleOfColor.layer.cornerRadius = exampleOfColor.frame.width / 15
-        exampleOfColor.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+        exampleOfColor.backgroundColor = setBackgroundColor()
 
     }
 
     @IBAction func redSliderAction() {
         redSlider.value = round(redSlider.value * 100) / 100
         redPercentLabel.text = redSlider.value.formatted()
-        exampleOfColor.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+        exampleOfColor.backgroundColor = setBackgroundColor()
     }
 
     @IBAction func greenSliderAction() {
         greenSlider.value = round(greenSlider.value * 100) / 100
         greenPercentLabel.text = greenSlider.value.formatted()
-//        exampleOfColor.backgroundColor = exampleOfColor.backgroundColor?.withAlphaComponent(CGFloat(greenSlider.value))
-        exampleOfColor.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+        exampleOfColor.backgroundColor = setBackgroundColor()
     }
 
     @IBAction func blueSliderAction() {
         blueSlider.value = round(blueSlider.value * 100) / 100
         bluePercentLabel.text = blueSlider.value.formatted()
-        exampleOfColor.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+        exampleOfColor.backgroundColor = setBackgroundColor()
     }
 
-//private func setBackgroundColor(
+    private func setBackgroundColor() -> UIColor {
+        return UIColor(
+            red: CGFloat(redSlider.value),
+            green: CGFloat(greenSlider.value),
+            blue: CGFloat(blueSlider.value),
+            alpha: 1
+        )
+    }
 
 }
 
